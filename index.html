@@ -14,7 +14,7 @@
         <h1>🎮 Math Maze</h1>
         <p>Eet alle bolletjes, beantwoord de rekenvragen en ontwijk de 4 spoken!</p>
         <p>Elk spook jaagt op een eigen manier. Pak een grote bol om ze bang te maken.</p>
-        <p>Bestuur met de pijltjes of W A S D. Je hebt 3 levens.</p>
+        <p>Bestuur met de pijltjes, W A S D of de knoppen op je scherm. Je hebt 3 levens.</p>
         <button onclick="startGame()">Start Game</button>
     </div>
 
@@ -35,6 +35,12 @@
         </div>
         <div id="message"></div>
         <div class="grid"></div>
+        <div id="touch-controls" aria-label="Aanraakbediening">
+            <button type="button" data-direction="0" aria-label="Omhoog">▲</button>
+            <button type="button" data-direction="3" aria-label="Links">◀</button>
+            <button type="button" data-direction="2" aria-label="Omlaag">▼</button>
+            <button type="button" data-direction="1" aria-label="Rechts">▶</button>
+        </div>
     </div>
 
     <!-- GAME OVER -->

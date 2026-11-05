@@ -109,7 +109,7 @@ function startGame() {
   prevNow = performance.now();
   running = true;
   updateHud();
-  showMsg('Klaar? Gebruik de pijltjes of W A S D!', 2000);
+  showMsg('Klaar? Gebruik de pijltjes, W A S D of de schermknoppen!', 2000);
   paused = false;
   loop = setInterval(tick, 40);
 }
@@ -120,6 +120,12 @@ function onKey(e) {
   e.preventDefault();
   nextDir = map[e.key];
 }
+
+document.querySelectorAll('#touch-controls button').forEach(button => {
+  button.addEventListener('click', () => {
+    nextDir = Number(button.dataset.direction);
+  });
+});
 
 function resetPositions() {
   pac = PAC_START; dir = -1; nextDir = -1; combo = 0; scaredUntil = 0;
