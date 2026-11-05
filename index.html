@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Math Maze</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <!-- START MENU -->
+    <div id="menu">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Galaxy" id="galaxy-bg">
+        <h1>🎮 Math Maze</h1>
+        <p>Eet alle bolletjes, beantwoord de rekenvragen en ontwijk de 4 spoken!</p>
+        <p>Elk spook jaagt op een eigen manier. Pak een grote bol om ze bang te maken.</p>
+        <p>Bestuur met de pijltjes of W A S D. Je hebt 3 levens.</p>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <!-- GAME -->
+    <div id="game" style="display:none;">
+        <div id="hud">
+            <span>Score: <b id="score">0</b></span>
+            <span>Level: <b id="level">1</b></span>
+            <span>Levens: <b id="lives">❤️❤️❤️</b></span>
+            <span>Highscore: <b id="high">0</b></span>
+        </div>
+        <h2 id="question"></h2>
+        <div id="answers" style="display:none;">
+            <button id="answer1"></button>
+            <button id="answer2"></button>
+            <button id="answer3"></button>
+            <button id="answer4"></button>
+        </div>
+        <div id="message"></div>
+        <div class="grid"></div>
+    </div>
+
+    <!-- GAME OVER -->
+    <div id="gameover" style="display:none;">
+        <h1>💀 Game Over</h1>
+        <p>Score: <span id="final-score">0</span></p>
+        <p>Level: <span id="final-level">1</span></p>
+        <p>Highscore: <span class="high">0</span></p>
+        <button onclick="location.reload()">Opnieuw</button>
+    </div>
+
+    <!-- WIN -->
+    <div id="win" style="display:none;">
+        <h1>🎉 Je hebt gewonnen!</h1>
+        <p>Score: <span id="win-score">0</span></p>
+        <p>Level: <span id="win-level">3</span></p>
+        <p>Highscore: <span class="high">0</span></p>
+        <button onclick="location.reload()">Nog een keer</button>
+    </div>
+</body>
+</html>
